@@ -4,7 +4,8 @@
   doc-category,
   doc-title,
   author,
-  affiliation,
+  affiliation-left,
+  affiliation-right,
   logo,
   logo-placement,
   heading-font,             // the heading-font is also used for all text on the titlepage
@@ -49,11 +50,12 @@
   set par(leading: 1em)  
   
   place(
-    bottom + left,
+    bottom + center,
     text( font: heading-font, weight: "regular", size: info-size, fill: black,)[
-      #datetime.today().display("[day].[month].[year]") \
-      #author \
-      #affiliation
-    ],
+          #datetime.today().display("[day].[month].[year]") \
+          #author \
+          #affiliation-left \
+          #affiliation-right
+        ]
   )
 }
