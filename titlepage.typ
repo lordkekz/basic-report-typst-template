@@ -14,7 +14,7 @@
   // ----- Page-Setup ------------------------
   set page(
     paper: "a4",
-    margin: (top: 3cm, left: 4.5cm, right: 3cm, bottom: 4.5cm),
+    margin: (top: 3cm, left: 3cm, right: 3cm, bottom: 4.5cm),
   )
 
   // Some basic rules for the title page layout:
@@ -29,17 +29,20 @@
     logo,
   )
 
-  v(6cm)                    // = 4 x 1.5 cm
+  v(8cm)
 
   // ----- Title Category & Title ------------------------
-  align(
-    left,                   // 1 x 14pt + 2 x 36pt ≈ 2 x 1.5 cm
-    text(font: heading-font, weight: "regular", size: 14pt, 
-      doc-category),
+  align(center,
+    text(font: heading-font, weight: "light", size: 28pt,  fill: blue,
+      doc-title,
+    ),
   )
 
-  text(font: heading-font, weight: "light", size: 36pt,  fill: blue,
-    doc-title,
+  align(
+    center,
+    text(font: heading-font, weight: "regular", size: 18pt,
+      doc-category,
+    ),
   )
 
   // ----- Info Block ------------------------
@@ -47,11 +50,10 @@
   
   place(
     bottom + left,
-    text(
-      font: heading-font, weight: "regular", size: info-size, fill: black,
-      datetime.today().display("[day].[month].[year]") + str("\n") + 
-      author + str("\n") + 
-      affiliation),
+    text( font: heading-font, weight: "regular", size: info-size, fill: black,)[
+      #datetime.today().display("[day].[month].[year]") \
+      #author \
+      #affiliation
+    ],
   )
-
 }

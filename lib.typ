@@ -48,8 +48,8 @@
     font: body-font,
     size: body-size,
     // Vollkorn has a broader stroke than other fonts; in order to adapt the grey value (Grauwert)
-    // of the page the font gets printed in a dark grey (80% instead of completely black)
-    fill: luma(80)
+    // of the page the font gets printed in a dark grey (15% brightness)
+    fill: luma(15%)
   )
 
   set par(
@@ -66,9 +66,9 @@
     //     on the left side; so more space needed on the left. On-screen it doesn't matter.
     // vertical 1.5cm-grid ≈ 20u: 2u top margin, 14u text, 2u botttom margin
     //     header with height ≈ 0.6cm is visually part of text block --> top margin = 3cm + 0.6cm
-    margin: (top: 3.6cm, left: 4.5cm, right: 3cm, bottom: 3cm),
+    margin: (top: 3.6cm, left: 3cm, right: 5cm, bottom: 3cm),
     // the header shows the main chapter heading  on the left and the page number on the right
-    header:  
+    header:
       grid(
         columns: (1fr, 1fr),
         align: (left, right),
