@@ -113,6 +113,7 @@
   
   // to detect, if inside or outside the outline (for different page numbers)
   show outline: it => {
+    set page(numbering: "i", number-align: top + right)
     in-outline.update(true)
     it
     in-outline.update(false)
@@ -162,13 +163,17 @@
       },
       indent: auto,
     )
-    counter(page).update(0)     // so the first chapter starts at page 1 (now in arabic numbers)
+    counter(page).update(1)     // so the first chapter starts at page 1 (now in arabic numbers)
   } else {
     in-outline.update(false)    // even if outline is not shown, we want to continue with arabic page numbers
     counter(page).update(1)
   }
 
   pagebreak()
+  // Set page numbering to arabic for PDF metadata.
+  // Due to number-align and header both being set, the typst-native page number
+  // won't be shown (instead the header defines where the page number appears)
+  set page(numbering: "1", number-align: top + right)
 
   // ----- Body Text ------------------------
   
