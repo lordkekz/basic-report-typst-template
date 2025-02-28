@@ -68,7 +68,7 @@
     //     on the left side; so more space needed on the left. On-screen it doesn't matter.
     // vertical 1.5cm-grid ≈ 20u: 2u top margin, 14u text, 2u botttom margin
     //     header with height ≈ 0.6cm is visually part of text block --> top margin = 3cm + 0.6cm
-    margin: (top: 3.6cm, left: 3cm, right: 5cm, bottom: 3cm),
+    margin: (top: 3.6cm, left: 2cm, right: 2cm, bottom: 3cm),
     // the header shows the main chapter heading  on the left and the page number on the right
     header:
       grid(
