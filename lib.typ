@@ -32,17 +32,17 @@
 
   // ----- Title Page ------------------------
 
-  titlepage(
-    doc-category,
-    doc-title,
-    author,
-    affiliation-left,
-    affiliation-right,
-    logo,
-    logo-placement,
-    heading-font,
-    info-size,
-  )
+  // titlepage(
+  //   doc-category,
+  //   doc-title,
+  //   author,
+  //   affiliation-left,
+  //   affiliation-right,
+  //   logo,
+  //   logo-placement,
+  //   heading-font,
+  //   info-size,
+  // )
 
   // ----- Basic Text- and Page-Setup ------------------------
 
@@ -68,7 +68,7 @@
     //     on the left side; so more space needed on the left. On-screen it doesn't matter.
     // vertical 1.5cm-grid ≈ 20u: 2u top margin, 14u text, 2u botttom margin
     //     header with height ≈ 0.6cm is visually part of text block --> top margin = 3cm + 0.6cm
-    margin: (top: 3.6cm, left: 2cm, right: 2cm, bottom: 3cm),
+    margin: (top: 3cm, left: 2cm, right: 2cm, bottom: 2cm),
     // the header shows the main chapter heading  on the left and the page number on the right
     header:
       grid(
@@ -169,7 +169,7 @@
     counter(page).update(1)
   }
 
-  pagebreak()
+  // pagebreak()
   // Set page numbering to arabic for PDF metadata.
   // Due to number-align and header both being set, the typst-native page number
   // won't be shown (instead the header defines where the page number appears)
